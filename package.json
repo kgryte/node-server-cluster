@@ -1,0 +1,53 @@
+{
+  "name": "@kgryte/server-cluster",
+  "version": "0.0.0",
+  "description": "Server cluster.",
+  "author": {
+    "name": "Athan Reines",
+    "email": "kgryte@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "kgryte@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kgryte/node-server-cluster.git"
+  },
+  "keywords": [
+    "http",
+    "https",
+    "server",
+    "cluster",
+    "simple",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/kgryte/node-server-cluster/issues"
+  },
+  "dependencies": {
+    "validate.io-function": "^1.0.2",
+    "validate.io-object": "^1.0.4",
+    "validate.io-positive-integer": "^1.0.0"
+  },
+  "devDependencies": {
+    "@kgryte/http-server": "^1.0.1",
+    "bunyan": "^1.5.1",
+    "chai": "3.x.x",
+    "codecov.io": "^0.1.5",
+    "express": "^4.13.3",
+    "istanbul": "^0.3.0",
+    "jshint": "2.x.x",
+    "jshint-stylish": "2.x.x",
+    "mocha": "2.x.x"
+  },
+  "license": "MIT"
+}

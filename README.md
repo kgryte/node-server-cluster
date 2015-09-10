@@ -37,20 +37,25 @@ var logger = bunyan.createLogger({
 	]
 });
 
-// Specify cluster options...
-var opts = {
-	'size': 8,
-	'timeout': 2500 // [ms]
-};
-
 // Create a function for creating a server cluster...
-var create = serverCluster( opts, logger );
+var create = serverCluster( logger );
 ```
 
 The `function` accepts the following `options`:
 
 *	__size__: cluster size. Default: `num_cpus`.
 *	__timeout__: maximum allowed time for a new worker to be ready to receive HTTP requests before being considered unhealthy. Default: `5000` [ms].
+
+To specify cluster options,
+
+``` javascript
+var opts = {
+	'size': 8,
+	'timeout': 2500 // [ms]
+};
+
+var create = serverCluster( opts, logger );
+```
 
 
 #### create( done )

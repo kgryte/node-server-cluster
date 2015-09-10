@@ -1,6 +1,6 @@
 {
   "name": "@kgryte/server-cluster",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Server cluster.",
   "author": {
     "name": "Athan Reines",

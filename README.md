@@ -67,6 +67,13 @@ create( done );
 ```
 
 
+## Notes
+
+*	This module does __not__, by itself, create `server` instances. Instead, the module expects to be used in conjunction with code which handles server creation. See the [examples](#examples) below.
+*	For server creation modules, see
+	-	[http-server](https://github.com/kgryte/node-http-server)
+	-	[https-server](https://github.com/kgryte/node-https-server)
+
 
 ## Examples
 
